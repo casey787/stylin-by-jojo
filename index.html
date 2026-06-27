@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stylin by Jojo | Luxury Personal Styling, South Florida</title>
-<meta name="description" content="Stylin by Jojo — luxury personal styling, closet edits, personal shopping, and designer sourcing in South Florida.">
+<title>StylinbyJojo | Luxury Personal Styling, South Florida</title>
+<meta name="description" content="StylinbyJojo — luxury personal styling, closet edits, personal shopping, and designer sourcing in South Florida.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -101,6 +101,15 @@
     transition:width .3s ease;
   }
   .nav-links a:hover::after{width:100%;}
+  .nav-links a.ig-link{
+    padding-bottom:0;
+    display:inline-flex;
+    align-items:center;
+    opacity:0.85;
+    transition:opacity .3s ease;
+  }
+  .nav-links a.ig-link:hover{opacity:1;}
+  .nav-links a.ig-link::after{display:none;}
   .nav-toggle{display:none;background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--black);}
 
   @media (max-width:760px){
@@ -388,6 +397,13 @@
     letter-spacing:0.04em;
   }
   .contact .btn{margin-top:36px;}
+  .contact-btns{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+  }
+  .contact-btns .btn{margin-top:36px;}
 
   footer{
     background:var(--black);
@@ -396,6 +412,17 @@
     padding:46px 0 34px;
   }
   footer .logo{color:var(--ivory);font-size:1.2rem;}
+  footer .footer-ig{
+    display:inline-block;
+    margin-top:16px;
+    font-size:0.8rem;
+    letter-spacing:0.08em;
+    color:var(--beige);
+    border-bottom:1px solid rgba(216,201,179,0.4);
+    padding-bottom:3px;
+    transition:opacity .3s ease;
+  }
+  footer .footer-ig:hover{opacity:0.75;}
   footer p{
     margin-top:14px;
     font-size:0.74rem;
@@ -420,7 +447,7 @@
 <header id="siteHeader">
   <div class="wrap">
     <nav>
-      <a href="#top" class="logo">Stylin <em>by</em> Jojo</a>
+      <a href="#top" class="logo">StylinbyJojo</a>
       <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
       <div class="nav-links" id="navLinks">
         <a href="#about">About</a>
@@ -428,6 +455,9 @@
         <a href="#gallery">Gallery</a>
         <a href="#location">Location</a>
         <a href="#contact">Contact</a>
+        <a href="https://www.instagram.com/stylinbyjojo" target="_blank" rel="noopener" class="ig-link" aria-label="StylinbyJojo on Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
       </div>
     </nav>
   </div>
@@ -437,7 +467,7 @@
   <div class="placeholder-fill"></div>
   <div class="hero-inner">
     <p class="eyebrow">South Florida &nbsp;&middot;&nbsp; Luxury Personal Styling</p>
-    <h1>Stylin by Jojo</h1>
+    <h1>StylinbyJojo</h1>
     <p>Editorial styling and elevated shopping experiences — curated for the way you actually live.</p>
     <a href="#contact" class="btn btn-light">Book a Consultation</a>
   </div>
@@ -447,15 +477,14 @@
 <section class="about" id="about">
   <div class="wrap about-grid">
     <div class="img-frame fade-up">
-      <img src="images/about.jpg" alt="Jojo, founder of Stylin by Jojo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <img src="images/about.jpg" alt="Jojo, founder of StylinbyJojo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
       <div class="ph-label" style="display:none;">Add photo<br>images/about.jpg</div>
     </div>
     <div class="about-text fade-up">
       <p class="eyebrow">The Stylist</p>
       <h2 style="margin:14px 0 24px;">A New York eye, a South Florida ease.</h2>
-      <p>Jojo built her career styling clients through the fast, exacting pace of New York — then brought that same precision south, trading the city's edit for South Florida's light, color, and ease.</p>
-      <p>Stylin by Jojo specializes in personal shopping and wardrobe styling, with a singular focus on creating elevated shopping experiences. Every client engagement is treated as a craft — considered, personal, and entirely your own.</p>
-      <p>Whether you're refining a single capsule or rebuilding a wardrobe from the ground up, the approach stays the same: editorial sensibility, genuine ease, and pieces that actually get worn.</p>
+      <p>After spending years in New York, I made the move to South Florida, bringing my love for fashion and styling with me. Inspired by New York's fashion scene and South Florida's effortless lifestyle, I created my brand StylinbyJojo to make getting dressed feel easier, more enjoyable, and completely personalized to each client.</p>
+      <p>StylinbyJojo specializes in personal shopping and wardrobe styling, creating elevated, one-on-one shopping experiences tailored to your lifestyle. Whether you're looking to refresh your everyday wardrobe, style a special event, pack for a vacation, or build a closet you'll love for years to come, my goal is to help you feel confident, put together, and authentically yourself.</p>
     </div>
   </div>
 </section>
@@ -556,15 +585,17 @@
     <h2 class="fade-up" style="margin:14px 0;">Start Your Styling Journey</h2>
     <a href="mailto:stylinbyjojo@gmail.com" class="email-link fade-up">stylinbyjojo@gmail.com</a>
     <p class="sub fade-up">South Florida &nbsp;&middot;&nbsp; By appointment</p>
-    <div class="fade-up">
+    <div class="fade-up contact-btns">
       <a href="mailto:stylinbyjojo@gmail.com" class="btn btn-dark">Send an Email</a>
+      <a href="https://www.instagram.com/stylinbyjojo" target="_blank" rel="noopener" class="btn btn-dark">Follow on Instagram</a>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="logo">Stylin <em>by</em> Jojo</div>
-  <p>&copy; <span id="year"></span> Stylin by Jojo. All rights reserved.</p>
+  <div class="logo">StylinbyJojo</div>
+  <a href="https://www.instagram.com/stylinbyjojo" target="_blank" rel="noopener" class="footer-ig">@stylinbyjojo on Instagram</a>
+  <p>&copy; <span id="year"></span> StylinbyJojo. All rights reserved.</p>
 </footer>
 
 <script>
